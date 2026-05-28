@@ -95,6 +95,7 @@ X_test_scaled = scaler.transform(X_test)
 print("Training Random Forest model...")
 model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
 model.fit(X_train_scaled, y_train)
+joblib.dump(model, "model.pkl")
 
 # Evaluate
 train_score = model.score(X_train_scaled, y_train)
