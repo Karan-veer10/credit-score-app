@@ -21,7 +21,7 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/credit-score/history', {
+      const response = await axios.get('https://credit-score-backend-lej7.onrender.com/api/credit-score/history', {
         headers: { Authorization: `Bearer ${token}` }
       });
       

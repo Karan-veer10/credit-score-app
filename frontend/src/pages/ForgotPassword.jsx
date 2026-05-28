@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      await axios.post('https://credit-score-backend-lej7.onrender.com/api/auth/forgot-password', { email });
       toast.success('Password reset email sent!');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Failed to send reset email');
