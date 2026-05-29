@@ -14,7 +14,7 @@ const ResetPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.put(`https://credit-score-backend-lej7.onrender.com/api/auth/reset-password/${token}`, { password });
+      await axios.put(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
       toast.success('Password reset successful!');
       navigate('/login');
     } catch (error) {

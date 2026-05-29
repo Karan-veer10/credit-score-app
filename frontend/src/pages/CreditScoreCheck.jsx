@@ -29,7 +29,7 @@ const CreditScoreCheck = () => {
     
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://credit-score-backend-lej7.onrender.com/api/credit-score/check', formData, {
+      const response = await axios.post('http://localhost:5000/api/credit-score/check', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setResult(response.data);
